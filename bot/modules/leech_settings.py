@@ -115,9 +115,9 @@ def setThumb(update, context):
     else:
         sendMessage("Reply to a photo to save custom thumbnail.", context.bot, update)
 
-leech_set_handler = CommandHandler(BotCommands.LeechSetCommand, leechSet, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
-set_thumbnail_handler = CommandHandler(BotCommands.SetThumbCommand, setThumb, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
-but_set_handler = CallbackQueryHandler(setLeechType, pattern="leechset", run_async=True)
+leech_set_handler = CommandHandler(BotCommands.LeechSetCommand, leechSet1, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
+set_thumbnail_handler = CommandHandler(BotCommands.SetThumbCommand, setThumb1, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
+but_set_handler = CallbackQueryHandler(setLeechType, pattern="leechset1", run_async=True)
 
 dispatcher.add_handler(leech_set_handler)
 dispatcher.add_handler(but_set_handler)
